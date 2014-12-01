@@ -21,52 +21,93 @@ public class DatabaseContract {
     /**
      * DataBase Schema Region
      */
-    public static abstract class DBACCOUNT implements BaseColumns {
-        public static final String TABLE = "account";
+    public static abstract class DBGROUP implements BaseColumns {
+        public static final String TABLE = "groupmaster";
         public static final String ID = "_id";
         public static final String NAME = "name";
         public static final String TYPE = "type";
+        public static final String CREATED_BY = "created_by";
+        public static final String CREATED_DT = "created_dt";
+        public static final String MODIFIED_BY = "modified_by";
+        public static final String MODIFIED_DT = "modified_dt";
         
     }
     
     public static abstract class DBCONTACTS implements BaseColumns {
-    	public static final String TABLE = "contacts";
+    	public static final String TABLE = "contactsmaster";
     	public static final String ID = "_id";
     	public static final String NAME = "name";
     	public static final String EMAIL = "email";
     	public static final String PHONE = "phone";
+    	public static final String CREATED_BY = "created_by";
+        public static final String CREATED_DT = "created_dt";
+        public static final String MODIFIED_BY = "modified_by";
+        public static final String MODIFIED_DT = "modified_dt";
     }
     
     public static abstract class DBCATEGORY implements BaseColumns {
-    	public static final String TABLE = "category";
+    	public static final String TABLE = "categorymaster";
     	public static final String ID = "_id";
     	public static final String NAME = "name";
+    	public static final String CREATED_BY = "created_by";
+        public static final String CREATED_DT = "created_dt";
+        public static final String MODIFIED_BY = "modified_by";
+        public static final String MODIFIED_DT = "modified_dt";
     }
     
-    public static abstract class DBACCOUNTCONTACT implements BaseColumns {
-    	public static final String TABLE = "accountcontact";
+    public static abstract class DBGROUPCONTACTS implements BaseColumns {
+    	public static final String TABLE = "groupcontacts";
     	public static final String ID = "_id";
-    	public static final String ACCOUNTID = "accountid";
+    	public static final String GROUPID = "groupid";
     	public static final String CONTACTID = "contactid";
+    	public static final String CREATED_BY = "created_by";
+        public static final String CREATED_DT = "created_dt";
+        public static final String MODIFIED_BY = "modified_by";
+        public static final String MODIFIED_DT = "modified_dt";
     }
     
     public static abstract class DBEXPENSE implements BaseColumns {
-    	public static final String TABLE = "expenses";
+    	public static final String TABLE = "expensemaster";
     	public static final String ID = "_id";
-    	public static final String ACCOUNTID = "accountid";
+    	public static final String GROUPID = "groupid";
     	public static final String EXPENSENAME = "name";
     	public static final String CATEGORYID = "categoryid";
     	public static final String AMOUNT = "amount";
     	public static final String EXPENSEDATE = "expensedate";
     	public static final String NOTES = "notes";
+    	public static final String EXPENSETYPEID = "expensetypeid";
+    	public static final String CREATED_BY = "created_by";
+        public static final String CREATED_DT = "created_dt";
+        public static final String MODIFIED_BY = "modified_by";
+        public static final String MODIFIED_DT = "modified_dt";
     }
     
-    public static abstract class EXPENSEEXTRAINFO implements BaseColumns {
-    	public static final String TABLE = "expenseextrainfo";
+   public static abstract class DBEXPENSEPAID implements BaseColumns {
+    	public static final String TABLE = "expensepaid";
     	public static final String ID = "_id";
-    	
+    	public static final String CONTACTID = "contactid";
+    	public static final String EXPENSEID = "expenseid";
+    	public static final String AMOUNT = "amount";
+    	public static final String CREATED_BY = "created_by";
+        public static final String CREATED_DT = "created_dt";
+        public static final String MODIFIED_BY = "modified_by";
+        public static final String MODIFIED_DT = "modified_dt";
     }
     
+   public static abstract class DBEXPENSEDISTRIBUTION implements BaseColumns {
+    	public static final String TABLE = "expensedistribution";
+    	public static final String ID = "_id";
+    	public static final String CONTACTID = "contactid";
+    	public static final String EXPENSEID = "expenseid";
+    	public static final String AMOUNT = "amount";
+    	public static final String DISTRIBUTIONTYPE = "distributiontype"
+    	public static final String CREATED_BY = "created_by";
+        public static final String CREATED_DT = "created_dt";
+        public static final String MODIFIED_BY = "modified_by";
+        public static final String MODIFIED_DT = "modified_dt";
+    }
+    
+
 
     /**
      * DataBase type
