@@ -5,7 +5,7 @@ import android.provider.BaseColumns;
 public class DatabaseContract {
 	
 	/**
-     * Constructor
+     * Constructor test checkin
      */
     public DatabaseContract() {
     }
