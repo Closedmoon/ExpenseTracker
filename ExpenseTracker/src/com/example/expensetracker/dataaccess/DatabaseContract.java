@@ -5,8 +5,8 @@ import android.provider.BaseColumns;
 public class DatabaseContract {
 	
 	/**
-     * Constructor test checkin
-     */
+     * Constructor
+     **/
     public DatabaseContract() {
     }
 
@@ -100,7 +100,7 @@ public class DatabaseContract {
     	public static final String CONTACTID = "contactid";
     	public static final String EXPENSEID = "expenseid";
     	public static final String AMOUNT = "amount";
-    	public static final String DISTRIBUTIONTYPE = "distributiontype"
+    	public static final String DISTRIBUTIONTYPE = "distributiontype";
     	public static final String CREATED_BY = "created_by";
         public static final String CREATED_DT = "created_dt";
         public static final String MODIFIED_BY = "modified_by";
