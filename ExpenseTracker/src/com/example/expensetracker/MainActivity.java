@@ -1,6 +1,7 @@
 package com.example.expensetracker;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -31,6 +32,13 @@ public class MainActivity extends Activity {
         if (id == R.id.action_settings) {
             return true;
         }
+        if(id == R.id.action_add_group)
+        {
+        	Intent intent = new Intent(MainActivity.this, AddGroupActivity.class);
+        	startActivity(intent);
+        	
+        }
+        
         return super.onOptionsItemSelected(item);
     }
 }
