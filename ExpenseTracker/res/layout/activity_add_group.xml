@@ -7,12 +7,41 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.expensetracker.AddGroupActivity" >
-
-    <TextView
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/llGroupName"
+         >
+        
+        <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"   
+        android:text="Group Name"
+         />
+        
+       <EditText 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"   
+        android:hint="Enter Group Name"
+        android:id="@+id/txtGroupName"
+        android:inputType="text"
+         />
+        <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"   
+        android:text="Members"
+         />
+        
+        </LinearLayout>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/llGroupName"
         android:id="@+id/txtloginuser"
         android:text="@string/hello_world" />
+    
     <LinearLayout 
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -25,8 +54,10 @@
         android:layout_height="wrap_content"
         android:id="@+id/btnAdd"
         android:layout_below="@id/llmembers"
+        android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:src="@drawable/ic_action_new"
+        android:onClick="AddTextControl"
         />
         
 
