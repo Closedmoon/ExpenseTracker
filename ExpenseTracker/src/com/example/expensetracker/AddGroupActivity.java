@@ -6,16 +6,21 @@ import com.example.expensetracker.entities.Contact;
 import com.example.expensetracker.entities.GroupContacts;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.app.Dialog;
 import android.content.ContentResolver;
+import android.content.DialogInterface;
 import android.content.res.ColorStateList;
 import android.database.Cursor;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.provider.ContactsContract;
 import android.text.InputType;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup.LayoutParams;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
@@ -64,7 +69,7 @@ public class AddGroupActivity extends Activity {
              
             while (cur.moveToNext()) 
             {
-                 
+               
                 String id = cur
                         .getString(cur
                                 .getColumnIndex(ContactsContract.Contacts._ID));
@@ -89,17 +94,57 @@ public class AddGroupActivity extends Activity {
         //LinearLayout layout = (LinearLayout) findViewById(R.id.info);
 
 
-        AutoCompleteTextView newMember = new AutoCompleteTextView(getApplicationContext());
-        newMember.setHint("eg .. Name");
+        EditText newMember = new EditText(getApplicationContext());
+        newMember.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+			
+				AddMemberPopUp();
+				
+			}
+
+		});
+        newMember.setHint("Click to add");
         newMember.setInputType(InputType.TYPE_CLASS_TEXT);
         newMember.setTextColor(Color.BLACK);
+        newMember.setFocusable(false);
         newMember.setLayoutParams(new LayoutParams(LayoutParams.MATCH_PARENT,LayoutParams.WRAP_CONTENT));
         ((LinearLayout) linearLayout).addView(newMember);
-        newMember.setAdapter(adapter);
+       // newMember.setAdapter(adapter);
         
         listControls.add(newMember);
 	}
 	
+	private void AddMemberPopUp()
+	{
+		AlertDialog.Builder builder = new AlertDialog.Builder(AddGroupActivity.this);
+		LayoutInflater inflater = AddGroupActivity.this.getLayoutInflater();
+		
+		View dialogView = inflater.inflate(R.layout.add_member_to_group, null);
+		builder.setView(dialogView);
+		builder.setTitle("Add Member");
+		
+		builder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+	           public void onClick(DialogInterface dialog, int id) {
+	               // User clicked OK button
+	           }
+	       });
+	builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+	           public void onClick(DialogInterface dialog, int id) {
+	               dialog.dismiss();
+	           }
+	       });
+	
+		AlertDialog dialog = builder.create();
+		
+		AutoCompleteTextView actvMember = (AutoCompleteTextView) dialogView.findViewById(R.id.txtMemberName);
+		actvMember.setAdapter(adapter);
+		
+		dialog.show();
+	}
+	
+
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.

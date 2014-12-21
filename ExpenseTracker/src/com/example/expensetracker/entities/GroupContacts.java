@@ -16,8 +16,19 @@ public class GroupContacts {
 	public void set_contactlist(ArrayList<Contact> _contactlist) {
 		this._contactlist = _contactlist;
 	}
+	public String get_groupname() {
+		return _groupname;
+	}
+	public void set_groupname(String _groupname) {
+		this._groupname = _groupname;
+	}
+	
+	
 	private int _groupid;
 	private ArrayList<Contact> _contactlist;
+	private String _groupname;
+	
+	
 	
 
 }
