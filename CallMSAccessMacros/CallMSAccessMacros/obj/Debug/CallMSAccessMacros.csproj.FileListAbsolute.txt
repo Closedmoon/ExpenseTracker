@@ -1,0 +1,10 @@
+C:\Users\atul_gupta12\Desktop\BlissPortal\CallMSAccessMacros\CallMSAccessMacros\bin\Debug\CallMSAccessMacros.exe.config
+C:\Users\atul_gupta12\Desktop\BlissPortal\CallMSAccessMacros\CallMSAccessMacros\obj\Debug\CallMSAccessMacros.csproj.ResolveComReference.cache
+C:\Users\atul_gupta12\Desktop\BlissPortal\CallMSAccessMacros\CallMSAccessMacros\bin\Debug\CallMSAccessMacros.exe
+C:\Users\atul_gupta12\Desktop\BlissPortal\CallMSAccessMacros\CallMSAccessMacros\bin\Debug\CallMSAccessMacros.pdb
+C:\Users\atul_gupta12\Desktop\BlissPortal\CallMSAccessMacros\CallMSAccessMacros\obj\Debug\CallMSAccessMacros.csprojResolveAssemblyReference.cache
+C:\Users\atul_gupta12\Desktop\BlissPortal\CallMSAccessMacros\CallMSAccessMacros\obj\Debug\CallMSAccessMacros.Form1.resources
+C:\Users\atul_gupta12\Desktop\BlissPortal\CallMSAccessMacros\CallMSAccessMacros\obj\Debug\CallMSAccessMacros.Properties.Resources.resources
+C:\Users\atul_gupta12\Desktop\BlissPortal\CallMSAccessMacros\CallMSAccessMacros\obj\Debug\CallMSAccessMacros.csproj.GenerateResource.Cache
+C:\Users\atul_gupta12\Desktop\BlissPortal\CallMSAccessMacros\CallMSAccessMacros\obj\Debug\CallMSAccessMacros.exe
+C:\Users\atul_gupta12\Desktop\BlissPortal\CallMSAccessMacros\CallMSAccessMacros\obj\Debug\CallMSAccessMacros.pdb
